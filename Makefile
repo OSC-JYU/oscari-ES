@@ -1,6 +1,7 @@
 IMAGES := $(shell docker images -f "dangling=true" -q)
 CONTAINERS := $(shell docker ps -a -q -f status=exited)
 
+.PHONY: clean build start
 
 clean:
 	docker rm -f $(CONTAINERS)
