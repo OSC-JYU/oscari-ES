@@ -1,0 +1,8 @@
+**/.*.swp
+**/.ropeproject
+**/.cache
+*.pyc
+/venv
+/docker-compose.yml
+build/elasticsearch/elasticsearch*.tar.gz
+Makefile_tuotanto
