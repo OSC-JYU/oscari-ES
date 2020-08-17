@@ -13,8 +13,6 @@ start:
 	--network oscari-net \
 	--network-alias elasticsearch \
 	--volume esdata6:/usr/share/elasticsearch/data \
-	-p 9200:9200 \
-	-p 9300:9300 \
 	-e xpack.security.enabled=false \
 	-e discovery.type=single-node \
 	--memory=4g \
