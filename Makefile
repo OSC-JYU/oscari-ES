@@ -7,16 +7,15 @@ clean:
 	docker rm -f $(CONTAINERS)
 	docker rmi -f $(IMAGES)
 
-
 start:
-	docker run -d --name elasticsearch6 \
+	docker run -d --name elasticsearch7 \
 	--network oscari-net \
 	--network-alias elasticsearch \
-	--volume esdata6:/usr/share/elasticsearch/data \
+	--volume oscari-es7-data:/usr/share/elasticsearch/data \
 	-e xpack.security.enabled=false \
 	-e discovery.type=single-node \
 	--memory=4g \
 	--memory-swap=4g \
 	--ulimit memlock=-1:-1 \
-	docker.elastic.co/elasticsearch/elasticsearch:6.8.1
+	docker.elastic.co/elasticsearch/elasticsearch:7.8.1
 
